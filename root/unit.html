@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unit Page</title>
+</head>
+<body>
+
+  <header>
+    <h1>TITLE</h1>
+    <button>Log out</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Name of unit</h2>
+      <img src="#" alt="Main image of unit">
+      <div>
+        <img src="#" alt="Additional photo 1">
+        <img src="#" alt="Additional photo 2">
+        <img src="#" alt="Additional photo 3">
+      </div>
+    </section>
+
+    <section>
+      <h3>Details</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+
+      <div>
+        <p>★ 5.0</p>
+        <p>Location</p>
+      </div>
+    </section>
+
+    <aside>
+      <h3>Php 4999 <small>/night</small></h3>
+
+      <form>
+        <div>
+          <label>CHECK-IN</label>
+          <input type="text" placeholder="Add Date">
+        </div>
+        <div>
+          <label>CHECKOUT</label>
+          <input type="text" placeholder="Add Date">
+        </div>
+        <button type="submit">Book Now</button>
+      </form>
+    </aside>
+  </main>
+
+</body>
+</html>
