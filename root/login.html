@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login Form</title>
+        <title>Title</title>
+        <link rel="stylesheet" href="assets\style.css">
+         <link href='https://fonts.googleapis.com/css?family=Instrument+Sans' rel='stylesheet'>
     </head>
 
     <body>
+
         <h1 class="login-title">Title</h1>
 
-        <div class="login">
-            <h2>Log In</h2>
+        <button class="login_button" id="login_button" type="button">Log In</button>
+
+        <img class="login-img" src="assets\picture\Gemini_Generated_Image_3hf23p3hf23p3hf2.png" alt="login-img">
+        
+        <button class="signin_button" id="signin_button" type="button">Sign In</button>
+
+        <div class="login" id="login">
+            <form action="homepage.html">
             <label for="email">Email</label> <br>
             <input type="email" placeholder="Enter Email" name="email" required> <br>
 
@@ -18,6 +27,26 @@
             <a href="file:///C:/Users/Angel%20De%20Gala/OneDrive/Documents/Project/root/homepage.html">
             <button class ="loginbutton" type="submit">Log In</button>
             </a>
+        </form>
         </div>
+
+        <div class="sign-in" id="sign-in">
+            <form action="homepage.html">
+            <label for="name">Name</label> <br>
+            <input type="text" placeholder="Enter Name" name="name" class="name_detail" required> <br>
+            <label for="email">Email</label> <br>
+            <input type="email" placeholder="Enter Email" name="email" required> <br>
+
+            <label for="password">Password</label> <br>
+            <input type="password" placeholder="Enter Password" name="password" required> <br>
+
+            <a href="homepage.html">
+            <button class ="loginbutton" type="submit">Sign</button>
+            </a>
+            </form>
+        </div>
+
+        <script src="js\script.js"></script>
+
     </body>
 </html>
