@@ -17,36 +17,34 @@
         <button class="signin_button" id="signin_button" type="button">Sign In</button>
 
         <div class="login" id="login">
-            <form action="homepage.html">
             <label for="email">Email</label> <br>
-            <input type="email" placeholder="Enter Email" name="email" required> <br>
+            <input type="email" placeholder="Enter Email" name="email" id="email"> <br>
+            <p id="emailError" class="validation"></p>
 
             <label for="password">Password</label> <br>
-            <input type="password" placeholder="Enter Password" name="password" required> <br>
+            <input type="password" placeholder="Enter Password" name="password" id="password"> <br>
+            <p id="password_Error" class="validation"></p>
 
-            <a href="file:///C:/Users/Angel%20De%20Gala/OneDrive/Documents/Project/root/homepage.html">
-            <button class ="loginbutton" type="submit">Log In</button>
-            </a>
-        </form>
+            <button class ="loginbutton" id="loginbutton" onclick="loginValidation()">Log In</button>
         </div>
 
         <div class="sign-in" id="sign-in">
-            <form action="homepage.html">
             <label for="name">Name</label> <br>
-            <input type="text" placeholder="Enter Name" name="name" class="name_detail" required> <br>
+            <input type="text" placeholder="Enter Name" name="name" class="name_detail" id="signin_nameDetail"> <br>
+            <p id="nameError" class="validation"></p>
+
             <label for="email">Email</label> <br>
-            <input type="email" placeholder="Enter Email" name="email" required> <br>
+            <input type="email" placeholder="Enter Email" name="email" id="signin_email"> <br>
+            <p id="signin-emailError" class="validation"></p>
 
             <label for="password">Password</label> <br>
-            <input type="password" placeholder="Enter Password" name="password" required> <br>
+            <input type="password" placeholder="Enter Password" name="password" id="signin_password"> <br>
+            <p id="signin-passwordError" class="validation"></p>
 
-            <a href="homepage.html">
-            <button class ="loginbutton" type="submit">Sign</button>
-            </a>
-            </form>
+            <button class ="loginbutton" id="signinButton" onclick="signinValidation()">Sign In</button>
         </div>
 
-        <script src="js\script.js"></script>
+        <script src="js\login.js"></script>
 
     </body>
 </html>

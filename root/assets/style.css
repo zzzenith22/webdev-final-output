@@ -334,6 +334,7 @@ hr {
     flex-direction: column;
   }
 }
+
 /* LOGIN PAGE */
 .login-title {
     position: absolute;
@@ -787,5 +788,13 @@ video {
   .unit-main {
     grid-template-columns: 1fr;
   }
+}
+
+.validation {
+  color: red;
+  font-size: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Instrument serif', sans-serif;
 }
 
