@@ -1,0 +1,37 @@
+{
+  "unit-one": {
+    "mainpic": "assets/picture/amazing-bedroom-in-condo-apartment-condo-renovations-etobicoke-768x512.jpg",
+    "video": "assets/video/1114.mp4",
+    "details": "Entire Apartment",
+    "nameOfUnit": "Downtown Oasis",
+    "unitDescription": "A stylish escape in the heart of the city. Enjoy modern comfort, natural light, and stunning skyline views — your perfect retreat from the urban rush.",
+    "location": "assets/picture/location-point-perfect-symbols-more-600nw-2249221541.jpg",
+    "location-name": "Downtown, Metro City",
+    "guests": "2 guests",
+    "beds": "1 bed"
+  },
+
+    "unit-two": {
+        "mainpic": "assets/picture/Untitled design.jpg",
+        "video": "assets/video/1114(2).mp4",
+        "details": "Entire Apartment",
+        "nameOfUnit": "Vista Lounge",
+        "unitDescription": "Experience elevated living with breathtaking city views. This modern space blends elegance and comfort, creating the perfect balance between style and relaxation.",
+        "location": "assets/picture/location-point-perfect-symbols-more-600nw-2249221541.jpg",
+        "location-name": "Upper East Side, Metro City",
+        "guests": "2 guests",
+        "beds": "1 bed"
+    },
+
+    "unit-three": {
+        "mainpic": "assets/picture/Untitled design unit.png",
+        "video": "assets/video/1114(1).mp4",
+        "details": "Entire Apartment",
+        "nameOfUnit": "Boho Nook",
+        "unitDescription": "A cozy retreat filled with warm tones, natural textures, and effortless charm — where comfort meets bohemian style for the perfect laid-back escape.",
+        "location": "assets/picture/location-point-perfect-symbols-more-600nw-2249221541.jpg",
+        "location-name": "Upper East Side, Metro City",
+        "guests": "2 guests",
+        "beds": "1 bed"
+    }
+}

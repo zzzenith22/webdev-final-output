@@ -59,7 +59,7 @@
 .check_in_container {
   text-align: center;
   height: 50px;
-  width: 250px;
+  width: 253px;
   padding-top: 13px;
   padding-bottom: 0;
 }
@@ -632,7 +632,7 @@ video {
         flex-direction: column;
     }
 }
-/* ================= UNIT PAGE ================= */
+
 
 /* Header */
 .unit-header {

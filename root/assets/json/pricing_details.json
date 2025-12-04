@@ -1,0 +1,16 @@
+{
+    "price-details": {
+        "name": "Unit Price",
+        "price": "Php 4999"
+    },
+
+    "cleaning-price":{
+        "name": "Cleaning Price",
+        "price": "Php 500"
+    },
+
+    "service-fee": {
+        "name": "Service Fee",
+        "price": "Php 500"
+    }
+}

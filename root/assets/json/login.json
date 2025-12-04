@@ -1,0 +1,13 @@
+{
+    "User": [
+        {
+        "email": "angeldegala@gmail.com",
+        "password": "angel123"
+        },
+
+        {
+            "email": "zenithcruz@gmail.com",
+            "password": "zenith123"
+        }
+    ]
+}
