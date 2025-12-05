@@ -1,162 +1,144 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const loginBtn = document.getElementById('login_button');
-  const signinBtn = document.getElementById('signin_button');
-  const loginDiv = document.getElementById('login');
-  const signinDiv = document.getElementById('sign-in');
 
+    const loginTabBtn = document.getElementById('login_button');
+    const signinTabBtn = document.getElementById('signin_button');
+    const loginDiv = document.getElementById('login');
+    const signinDiv = document.getElementById('sign-in');
 
-  const ACTIVE_BG = '#004030';
-  const ACTIVE_COLOR = '#ffffff';
+    const loginFormBtn = document.getElementById('loginbutton');
+    const signinFormBtn = document.getElementById('signinButton');
 
+    const ACTIVE_BG = '#004030';
+    const ACTIVE_COLOR = '#ffffff';
 
-  function applyActiveStyle(btn) {
-    btn.style.backgroundColor = ACTIVE_BG;
-    btn.style.color = ACTIVE_COLOR;
-  }
+    function setActive(btnActive, btnInactive) {
+        btnActive.style.backgroundColor = ACTIVE_BG;
+        btnActive.style.color = ACTIVE_COLOR;
+        btnInactive.style.backgroundColor = "";
+        btnInactive.style.color = "";
+    }
 
+    function showLogin() {
+        loginDiv.style.display = "block";
+        signinDiv.style.display = "none";
+        setActive(loginTabBtn, signinTabBtn);
+    }
 
-  function clearStyle(btn) {
-    btn.style.backgroundColor = '';
-    btn.style.color = '';
-  }
+    function showSignin() {
+        loginDiv.style.display = "none";
+        signinDiv.style.display = "block";
+        setActive(signinTabBtn, loginTabBtn);
+    }
 
+    loginTabBtn.addEventListener('click', showLogin);
+    signinTabBtn.addEventListener('click', showSignin);
 
-  function showLoginForm() {
-    loginDiv.style.display = 'block';
-    signinDiv.style.display = 'none';
-  }
-
-  function showSigninForm() {
-    loginDiv.style.display = 'none';
-    signinDiv.style.display = 'block';
-  }
-
-
-  function activateLogin() {
-    loginBtn.classList.add('active');
-    signinBtn.classList.remove('active');
-
-    applyActiveStyle(loginBtn);
-    clearStyle(signinBtn);
-
-    showLoginForm();
-  }
-
-
-  function activateSignin() {
-    signinBtn.classList.add('active');
-    loginBtn.classList.remove('active');
-
-    applyActiveStyle(signinBtn);
-    clearStyle(loginBtn);
-
-    showSigninForm();
-  }
-
-  loginBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    activateLogin();
-  });
-
-  signinBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    activateSignin();
-  });
-
-  function addHoverHandlers(btn) {
-    btn.addEventListener('mouseenter', () => {
-      if (!btn.classList.contains('active')) {
-        applyActiveStyle(btn);
-      }
+    loginFormBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginValidation();
     });
-    btn.addEventListener('mouseleave', () => {
-      if (!btn.classList.contains('active')) {
-        clearStyle(btn);
-      }
+    signinFormBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        signinValidation();
     });
-  }
-  addHoverHandlers(loginBtn);
-  addHoverHandlers(signinBtn);
 
-  activateLogin();
-
+    showLogin();
 });
 
- 
- 
-  const emailLogin = document.getElementById('email');
+function loginValidation() {
+    const emailLogin = document.getElementById('email');
+    const passwordLogin = document.getElementById('password');
 
- function loginValidation() {
+    let valid = true;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailLogin.value)) {
+        document.getElementById('emailError').innerText = 'Please enter a valid email.';
+        emailLogin.style.border = '2px solid red';
+        valid = false;
+    } else {
+        document.getElementById('emailError').innerText = '';
+        emailLogin.style.border = '2px solid black';
+    }
 
-   let valid = true;
-    
-  if (emailLogin === '' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-    document.getElementById('emailError').innerHTML = 'Please enter a valid email.';
-    document.getElementById('email').style.border = '2px solid red';
-    valid = false;
-  } else {
-    document.getElementById('emailError').innerHTML = '';
-    document.getElementById('email').style.border = '2px solid black';
-  }
+    if (passwordLogin.value === '') {
+        document.getElementById('password_Error').innerText = 'Please enter your password.';
+        passwordLogin.style.border = '2px solid red';
+        valid = false;
+    } else {
+        document.getElementById('password_Error').innerText = '';
+        passwordLogin.style.border = '2px solid black';
+    }
 
-   const passwordLogin = document.getElementById('password').value;
-  if (passwordLogin === '') {
-    document.getElementById('password_Error').innerHTML = 'Please enter your password.';
-    document.getElementById('password').style.border = '2px solid red';
-    valid = false;
-  } else if (passwordLogin.length < 8) {
-    document.getElementById('password_Error').innerHTML = 'Please enter a valid password.';
-    document.getElementById('password').style.border = '2px solid red';
-  } else {
-    document.getElementById('password_Error').innerHTML = '';
-    document.getElementById('password').style.border = '2px solid black';
-  }
+    if (!valid) return;
 
-  if (valid) {
-    window.location.href = "homepage.html"; 
-  }
+    fetch("assets/json/login.json")
+        .then(res => res.json())
+        .then(data => {
+
+            let defaultUsers = data.User;
+            let savedUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+            let users = [...defaultUsers, ...savedUsers];
+
+            const user = users.find(u =>
+                u.email === emailLogin.value &&
+                u.password === passwordLogin.value
+            );
+
+            if (user) {
+                window.location.href = "homepage.html";
+            } else {
+                document.getElementById('password_Error').innerText = 'Incorrect email or password.';
+                passwordLogin.style.border = '2px solid red';
+            }
+
+        })
+        .catch(err => console.log("Error loading JSON:", err));
 }
 
+function signinValidation() {
+    const nameInput = document.getElementById('signin_nameDetail');
+    const emailSignin = document.getElementById('signin_email');
+    const passwordSignin = document.getElementById('signin_password');
 
-   function signinValidation() {
+    let valid = true;
 
-    valid = true;
+    if (nameInput.value === '' || !/^[a-zA-Z ]+$/.test(nameInput.value)) {
+        document.getElementById('nameError').innerText = 'Please enter a valid name.';
+        nameInput.style.border = '2px solid red';
+        valid = false;
+    } else {
+        document.getElementById('nameError').innerText = '';
+        nameInput.style.border = '2px solid black';
+    }
 
-  const emailSignin = document.getElementById('signin_email').value;
-  if (emailSignin === '' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailSignin)) {
-    document.getElementById('signin-emailError').innerHTML = 'Please enter a valid email.';
-    document.getElementById('signin_email').style.border = '2px solid red';
-    valid = false;
-  } else {
-    document.getElementById('signin-emailError').innerHTML = '';
-    document.getElementById('signin_email').style.border = '2px solid black';
-  }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailSignin.value)) {
+        document.getElementById('signin-emailError').innerText = 'Please enter a valid email.';
+        emailSignin.style.border = '2px solid red';
+        valid = false;
+    } else {
+        document.getElementById('signin-emailError').innerText = '';
+        emailSignin.style.border = '2px solid black';
+    }
 
-  const passwordSignin = document.getElementById('signin_password').value;
-  if (passwordSignin === '') {
-    document.getElementById('signin-passwordError').innerHTML = 'Please a valid password';
-    document.getElementById('signin_password').style.border = '2px solid red';
-    valid = false;
-  } else if (passwordSignin.length < 8) {
-    document.getElementById('signin-passwordError').innerHTML = 'Password must be at least 8 characters long.';
-    document.getElementById('signin_password').style.border = '2px solid red';
-    valid = false;
-  } else {
-    document.getElementById('signin-passwordError').innerHTML = '';
-    document.getElementById('signin_password').style.border = '2px solid black';
-  }
+    if (passwordSignin.value.length < 8) {
+        document.getElementById('signin-passwordError').innerText = 'Password must be at least 8 characters long.';
+        passwordSignin.style.border = '2px solid red';
+        valid = false;
+    } else {
+        document.getElementById('signin-passwordError').innerText = '';
+        passwordSignin.style.border = '2px solid black';
+    }
 
-  const nameDetails = document.getElementById('signin_nameDetail').value;
-  if (nameDetails === '' || !/^[a-zA-Z ]+$/.test(nameDetails)) {
-    document.getElementById('nameError').textContent = 'Please enter a valid name.';
-    document.getElementById('signin_nameDetail').style.border = '2px solid red';
-    valid = false;
-  } else {
-    document.getElementById('nameError').textContent = '';
-    document.getElementById('signin_nameDetail').style.border = '2px solid black';
-  }
+    if (!valid) return;
 
-  if (valid) {
-    window.location.href = "homepage.html"; 
-  }
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    users.push({
+        name: nameInput.value,
+        email: emailSignin.value,
+        password: passwordSignin.value
+    });
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Account created successfully!");
+    window.location.href = "homepage.html";
 }
