@@ -26,9 +26,9 @@
   flex-direction: column;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
   overflow: visible;
-  width: 600px;
-  margin-left: 40px;
-  padding-left: 50px;
+  width: 400px;
+  margin-left: 10px;
+  padding-left: 30px;
   padding-bottom: 40px;
   margin-top: 30px;
   min-width: 600px;
@@ -798,3 +798,113 @@ video {
   font-family: 'Instrument serif', sans-serif;
 }
 
+
+@media (max-width: 1300px) {
+  .details {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 20px;
+  }
+
+  .more_details, .booking_informations {
+    width: 90%;
+    min-width: unset;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .check_in, .check_out, .message_text, .first_name, .last_name, 
+  .email, .phone_number, .card_number, .expiry, .cvv {
+    position: relative;
+    top: unset;
+    left: unset;
+    font-size: 16px;
+  }
+
+  .check_in_container, .message, .name_container, .email_container, 
+  .phone_number_container, .card_number_container, .payment_container {
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+  }
+
+  .unit-main {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .three_units {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .details, .three_units {
+    gap: 10px;
+  }
+
+  .more_details, .booking_informations {
+    padding: 10px;
+  }
+
+  .unit-one {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .homepage_title {
+    font-size: 30px;
+    padding: 15px 30px;
+  }
+
+  .homepage_content {
+    font-size: 25px;
+    padding-left: 15px;
+  }
+
+  .unit-gallery h2 {
+    font-size: 18px;
+  }
+
+  .main-image img {
+    height: 200px;
+  }
+
+  .additional-images img {
+    height: 100px;
+  }
+
+  .unit-booking h3 {
+    font-size: 20px;
+  }
+
+  .book-now {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .login-title {
+    font-size: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .login, .sign-in {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 40px 20px;
+  }
+
+  .log_out {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+
+  .unit-header h1 {
+    font-size: 28px;
+  }
+}

@@ -1,123 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Details</title>
-        <link rel="stylesheet" href="assets\style.css">
-    </head>
+<head>
+    <title>Details</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
 
-    <body>
-        <h1 class="homepage_title">Title</h1>
-        <button class="log_out" type="submit">Log Out</button>
+<body>
+    <h1 class="homepage_title">kanlungan.</h1>
+    <button class="log_out" type="submit">Log Out</button>
 
-        <div class="details">
+    <div class="details">
 
-            <div class="booking_informations">
+        <form>
 
-                <p class="details_title">Booking Information</p>
+        <div class="booking_informations">
+            <p class="details_title">Booking Information</p>
 
-                <form>
-                    <div class="booking_information">
-                        <label for="check_in" class="check_in">Check-In</label>
-                        <input type="date" name="check_in" id="check_in" placeholder="Add Date" class="check_in_container" required>
-                        <label for="check_out" class="check_out" >Check-Out</label>
-                        <input type="date" name="check_out" id="check_out" placeholder="Add Date" class="check_in_container" required>
-                    </div>
+            <div class="booking_information">
+                <label for="check_in" class="check_in">Check-In</label>
+                <input type="date" id="check_in" class="check_in_container" required>
 
-                    <input type="text" name="message" id="message" placeholder="Add Message" class="message">
-                    <label for="message" class="message_text">Message to host (optional)</label>
+                <label for="check_out" class="check_out">Check-Out</label>
+                <input type="date" id="check_out" class="check_in_container" required>
+            </div>
 
-                    <p class="details_title">Guest Information</p>
+            <input type="text" id="message" placeholder="Add Message" class="message">
+            <label for="message" class="message_text">Message to host (optional)</label>
 
-                    <div class="guest_information">
-                        <label for="first_name" class="first_name">First Name</label>
-                        <input type="text" name="first_name" id="first_name" placeholder="Add Text" class="name_container" required>
-                        <label for="last_name" class="last_name">Last Name</label>
-                        <input type="text" name="last_name" id="last_name" placeholder="Add Text" class="name_container" required>
-                    </div>
+            <p class="details_title">Guest Information</p>
 
-                    <div class="additional_information">
-                        <label for="email" class="email">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="Add Email Address" class="email_container" required>
-                        <label for="phone_number" class="phone_number">Phone Number</label>
-                        <input type="number" name="phone_number" id="phone_number" placeholder="Add Number" class="phone_number_container" required>
-                    </div>
+            <div class="guest_information">
+                <label for="first_name" class="first_name">First Name</label>
+                <input type="text" id="first_name" class="name_container" required>
 
-                    <p class="details_title">Payment Information</p>
+                <label for="last_name" class="last_name">Last Name</label>
+                <input type="text" id="last_name" class="name_container" required>
+            </div>
 
-                    <label for="card_number" class="card_number">Card Number</label>
-                    
-                    <input type="text" name="card_number" id="card_number" placeholder="Add Card Number" class="card_number_container" required>
+            <div class="additional_information">
+                <label for="email" class="email">Email Address</label>
+                <input type="email" id="email" class="email_container" required>
 
-                    <div class="payment_information">
-                        <label for="expiry" class="expiry">Expiry Date</label>
-                        <input type="text" name="expiry" id="expiry" placeholder="MM/YY" class="payment_container" required>
-                        <label for="cvv" class="cvv">CVV</label>
-                        <input type="text" name="cvv" id="cvv" placeholder="123" class="payment_container" required>
-                    </div>
-                </div>
+                <label for="phone_number" class="phone_number">Phone Number</label>
+                <input type="number" id="phone_number" class="phone_number_container" required>
+            </div>
 
-                <div class="more_details">
+            <p class="details_title">Payment Information</p>
 
-                    <div class="unit-card">
-                        <img src="assets\picture\Untitled design unit.png" alt="Unit photo" class="unit-img">
+            <label for="card_number" class="card_number">Card Number</label>
+            <input type="text" id="card_number" class="card_number_container" required>
 
-                        <div class="unit-info">
-                            <h3 class="unit-name">Boho Nook</h3>
+            <div class="payment_information">
+                <label for="expiry" class="expiry">Expiry Date</label>
+                <input type="text" id="expiry" placeholder="MM/YY" class="payment_container" required>
 
-                            <div class="unit-rating">
-                                <span class="star">★</span>
-                                <span class="rating-value">5.0</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="price_details">Price Details</p>
-                    <hr>
-
-                        <div class="price_details">
-                        <div class="unit_price">
-                        <p class="prices">Unit Price</p>
-                        <p class="prices" id="unitPrice">Php 4999</p>
-                        </div>
-
-                        <div class="cleaning_price">
-                        <p class="prices">Cleaning Price</p>
-                        <p class="prices" id="cleaningPrice">Php 500</p>
-                        </div>
-
-                        <div class="service_fee">
-                        <p class="prices">Service Fee</p>
-                        <p class="prices" id="serviceFee">Php 500</p>
-                        </div>
-
-                        <hr>
-
-                        <div class="total">
-                        <p class="prices">Total</p>
-                        <p class="prices" id="totalPrice">Php 5999</p>
-                        </div>
-
-
-                        <div class="agreements">
-                            <div class="terms_conditions_container">
-                                <input type="checkbox" name="terms_conditions" id="terms_conditions" class="terms_conditions">
-                                <label for="terms_conditions" class="conditions"> I agree to the terms and conditions</label>
-                            </div>
-
-                            <div class="special_offers_container">
-                                <input type="checkbox" name="special_offers" id="special_offers" class="special_offers">
-                                <label for="special_offers" class="conditions"> Send me promotional emails and special offers</label>
-                            </div>
-                        </div>
-
-                        <button class="book_now" type="submit">  Book Now</button>
-
-                    </div>
-                </div>
-            </form>
+                <label for="cvv" class="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" class="payment_container" required>
+            </div>
         </div>
-        
-        <script src="js/booking.js"></script>
 
-    </body>
+        <div class="more_details">
+
+            <div class="unit-card">
+                <img src="assets/picture/Untitled design unit.png" class="unit-img">
+                <div class="unit-info">
+                    <h3 class="unit-name">Boho Nook</h3>
+                    <div class="unit-rating"><span class="star">★</span><span class="rating-value">5.0</span></div>
+                </div>
+            </div>
+
+            <p class="price_details">Price Details</p>
+            <hr>
+
+            <div class="price_details">
+                <div class="unit_price">
+                    <p class="prices">Unit Price</p>
+                    <p class="prices" id="unitPrice">Php 0</p>
+                </div>
+
+                <div class="cleaning_price">
+                    <p class="prices">Cleaning Price</p>
+                    <p class="prices" id="cleaningPrice">Php 0</p>
+                </div>
+
+                <div class="service_fee">
+                    <p class="prices">Service Fee</p>
+                    <p class="prices" id="serviceFee">Php 0</p>
+                </div>
+
+                <hr>
+
+                <div class="total">
+                    <p class="prices">Total</p>
+                    <p class="prices" id="totalPrice">Php 0</p>
+                </div>
+            
+                <div class="agreements">
+                    <label><input type="checkbox" id="terms_conditions"> I agree to terms & conditions</label>
+                    <label><input type="checkbox" id="special_offers"> Send me offers</label>
+                </div>
+
+                <button id="bookNow" type="button" class="book_now">Book Now</button>
+            </div>
+        </div>
+
+        </form>
+
+    </div>
+
+    <script src="js/booking.js"></script>
+
+</body>
 </html>
