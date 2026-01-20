@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showLogin();
 });
 
+
 function loginValidation() {
     const emailLogin = document.getElementById('email');
     const passwordLogin = document.getElementById('password');

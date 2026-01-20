@@ -801,7 +801,7 @@ video {
 
 @media (max-width: 1300px) {
   .details {
-    flex-direction: column;
+    flex-direction: row;
     margin-left: 0;
     gap: 20px;
   }
