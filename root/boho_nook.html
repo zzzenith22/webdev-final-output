@@ -11,54 +11,54 @@
 
     <div class="details">
 
+        <div class="booking_informations">
+
+                <p class="details_title">Booking Information</p>
+
         <form>
 
-        <div class="booking_informations">
-            <p class="details_title">Booking Information</p>
+        <div class="booking_information">
+                    <label for="check_in" class="check_in">Check-In</label>
+                    <input type="date" id="check_in" class="check_in_container" required>
 
-            <div class="booking_information">
-                <label for="check_in" class="check_in">Check-In</label>
-                <input type="date" id="check_in" class="check_in_container" required>
+                    <label for="check_out" class="check_out" >Check-Out</label>
+                    <input type="date" id="check_in" class="check_in_container" required>
+                </div>
 
-                <label for="check_out" class="check_out">Check-Out</label>
-                <input type="date" id="check_out" class="check_in_container" required>
+                <input type="text" name="message" id="message" placeholder="Add Message" class="message">
+                <label for="message" class="message_text">Message to host (optional)</label>
+
+                <p class="details_title">Guest Information</p>
+
+                <div class="guest_information">
+                    <label for="first_name" class="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name" placeholder="Add Text" class="name_container" required>
+                    <label for="last_name" class="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" placeholder="Add Text" class="name_container" required>
+                </div>
+
+                <div class="additional_information">
+                    <label for="email" class="email">Email Address</label>
+                    <input type="email" name="email" id="email" placeholder="Add Email Address" class="email_container" required>
+                    <label for="phone_number" class="phone_number">Phone Number</label>
+                    <input type="number" name="phone_number" id="phone_number" placeholder="Add Number" class="phone_number_container" required>
+                </div>
+
+                <p class="details_title">Payment Information</p>
+                
+                <label for="card_number" class="card_number">Card Number</label>
+                <input type="text" name="card_number" id="card_number" placeholder="Add Card Number" class="card_number_container" required>
+
+                <div class="payment_information">
+                    <label for="expiry" class="expiry">Expiry Date</label>
+                    <input type="text" name="expiry" id="expiry" placeholder="MM/YY" class="payment_container" required>
+                    <label for="cvv" class="cvv">CVV</label>
+                    <input type="text" name="cvv" id="cvv" placeholder="123" class="payment_container" required>
+                </div>
             </div>
 
-            <input type="text" id="message" placeholder="Add Message" class="message">
-            <label for="message" class="message_text">Message to host (optional)</label>
 
-            <p class="details_title">Guest Information</p>
-
-            <div class="guest_information">
-                <label for="first_name" class="first_name">First Name</label>
-                <input type="text" id="first_name" class="name_container" required>
-
-                <label for="last_name" class="last_name">Last Name</label>
-                <input type="text" id="last_name" class="name_container" required>
-            </div>
-
-            <div class="additional_information">
-                <label for="email" class="email">Email Address</label>
-                <input type="email" id="email" class="email_container" required>
-
-                <label for="phone_number" class="phone_number">Phone Number</label>
-                <input type="number" id="phone_number" class="phone_number_container" required>
-            </div>
-
-            <p class="details_title">Payment Information</p>
-
-            <label for="card_number" class="card_number">Card Number</label>
-            <input type="text" id="card_number" class="card_number_container" required>
-
-            <div class="payment_information">
-                <label for="expiry" class="expiry">Expiry Date</label>
-                <input type="text" id="expiry" placeholder="MM/YY" class="payment_container" required>
-
-                <label for="cvv" class="cvv">CVV</label>
-                <input type="text" id="cvv" placeholder="123" class="payment_container" required>
-            </div>
-        </div>
-
+    ?
         <div class="more_details">
 
             <div class="unit-card">

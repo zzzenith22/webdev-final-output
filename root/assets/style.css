@@ -3,8 +3,8 @@
 .details {
   display: flex;
   flex-direction: row;
-  gap: 50px;
   margin-left: 150px;
+  flex-wrap: wrap;
 }
 
 .more_details {
@@ -12,13 +12,12 @@
   flex-direction: column;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
   overflow: visible;
-  width: 450px;
-  margin-left: 30px;
+  width: 100%;
   padding-left: 30px;
   padding-top: 40px;
   padding-bottom: 40px;
   margin-top: 30px;
-  min-width: 450px;
+  max-width: 450px;
 }
 
 .booking_informations {
@@ -26,12 +25,12 @@
   flex-direction: column;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
   overflow: visible;
-  width: 400px;
+  width: 100%;
   margin-left: 10px;
   padding-left: 30px;
   padding-bottom: 40px;
   margin-top: 30px;
-  min-width: 600px;
+  max-width: 600px;
 }
 
 .booking_information {
@@ -334,6 +333,8 @@ hr {
     flex-direction: column;
   }
 }
+
+*/
 
 /* LOGIN PAGE */
 .login-title {
@@ -783,7 +784,8 @@ video {
   opacity: 0.85;
 }
 
-/* Responsive */
+
+/* Responsive
 @media(max-width: 1100px) {
   .unit-main {
     grid-template-columns: 1fr;
@@ -908,3 +910,6 @@ video {
     font-size: 28px;
   }
 }
+
+*/
+
