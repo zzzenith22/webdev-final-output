@@ -784,6 +784,16 @@ video {
   opacity: 0.85;
 }
 
+.unit_one_link {
+  text-decoration: none; 
+  color: inherit;        
+  display: block;        
+}
+
+.unit_one_link:hover {
+  text-decoration: none; 
+}
+
 
 /* Responsive
 @media(max-width: 1100px) {

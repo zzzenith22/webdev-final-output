@@ -8,7 +8,8 @@
     "location": "assets/picture/location-point-perfect-symbols-more-600nw-2249221541.jpg",
     "location-name": "Downtown, Metro City",
     "guests": "2 guests",
-    "beds": "1 bed"
+    "beds": "1 bed",
+    "page": "downtown_oasis_info.html"
   },
 
     "unit-two": {
@@ -20,7 +21,8 @@
         "location": "assets/picture/location-point-perfect-symbols-more-600nw-2249221541.jpg",
         "location-name": "Upper East Side, Metro City",
         "guests": "2 guests",
-        "beds": "1 bed"
+        "beds": "1 bed",
+        "page": "vista_lounge_info.html"
     },
 
     "unit-three": {
@@ -32,6 +34,7 @@
         "location": "assets/picture/location-point-perfect-symbols-more-600nw-2249221541.jpg",
         "location-name": "Upper East Side, Metro City",
         "guests": "2 guests",
-        "beds": "1 bed"
+        "beds": "1 bed",
+        "page": "boho_nook_info.html"
     }
 }

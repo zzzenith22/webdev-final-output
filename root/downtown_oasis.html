@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        <h1 class="homepage_title">Title</h1>
+        <h1 class="homepage_title">kanlungan.</h1>
         <button class="log_out" type="submit">Log Out</button>
 
         <div class="details">
@@ -15,13 +15,13 @@
 
                 <p class="details_title">Booking Information</p>
 
-                <form>
+                <form id = "bookingForm">
                 <div class="booking_information">
                     <label for="check_in" class="check_in">Check-In</label>
                     <input type="date" id="check_in" class="check_in_container" required> 
 
                     <label for="check_out" class="check_out" >Check-Out</label>
-                    <input type="date" id="check_in" class="check_in_container" required>
+                    <input type="date" id="check_out" class="check_in_container" required>
                 </div>
 
                 <input type="text" name="message" id="message" placeholder="Add Message" class="message">
@@ -77,25 +77,26 @@
 
                 <div class="price_details">
                     <div class="unit_price">
-                        <p class="prices">Unit Price</p>
-                        <p class="prices">Php 4999</p>
-                    </div>
 
-                    <div class="cleaning_price">
-                        <p class="prices">Cleaning Price</p>
-                        <p class="prices">Php 500</p>
-                    </div>
+<p class="prices">Unit Price</p>
+<p class="prices" id="unitPrice">Php 0</p>
+</div>
 
-                    <div class="service_fee">
-                        <p class="prices">Service Fee</p>
-                        <p class="prices">Php 500</p>
-                    </div>
-                    <hr>
+<div class="cleaning_price">
+<p class="prices">Cleaning Price</p>
+<p class="prices" id="cleaningPrice">Php 500</p>
+</div>
 
-                    <div class="total">
-                        <p class="prices">Total</p>
-                        <p class="prices">Php 5999</p>
-                    </div>
+<div class="service_fee">
+<p class="prices">Service Fee</p>
+<p class="prices" id="serviceFee">Php 500</p>
+</div>
+
+<div class="total">
+<p class="prices">Total</p>
+<p class="prices" id="totalPrice">Php 0</p>
+</div>
+
 
                     <div class="agreements">
                         <div class="terms_conditions_container">
@@ -115,5 +116,6 @@
             </div>
             </form>
         </div>
+         <script src="js/booking.js"></script>
     </body>
 </html>
